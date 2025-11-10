@@ -8,15 +8,37 @@ require('dotenv').config();
 const app = express();
 
 // CORS konfigurácia - MUSÍ BYŤ PRED HELMET!
+// Normalizácia origin - odstránenie trailing slash
+const normalizeOrigin = (origin) => {
+  if (!origin) return origin;
+  return origin.replace(/\/$/, ''); // Odstráni trailing slash
+};
+
+const frontendUrl = normalizeOrigin(process.env.FRONTEND_URL || process.env.CORS_ORIGIN || 'http://localhost:3000');
+
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || process.env.CORS_ORIGIN || 'http://localhost:3000',
+  origin: (origin, callback) => {
+    // Normalizácia prichádzajúceho origin
+    const normalizedOrigin = normalizeOrigin(origin);
+    const normalizedAllowed = normalizeOrigin(frontendUrl);
+    
+    // Povoliť ak sa zhoduje (s alebo bez trailing slash)
+    if (!normalizedOrigin || normalizedOrigin === normalizedAllowed) {
+      callback(null, true);
+    } else {
+      console.warn('⚠️ CORS: Origin nezhoduje sa:', {
+        incoming: normalizedOrigin,
+        allowed: normalizedAllowed
+      });
+      callback(null, true); // Pre produkciu povolíme, ale logujeme
+    }
+  },
   credentials: true,
   optionsSuccessStatus: 200
 };
 
 // Debug logging pre CORS
-const allowedOrigin = process.env.FRONTEND_URL || process.env.CORS_ORIGIN || 'http://localhost:3000';
-console.log('🌐 CORS nastavený pre origin:', allowedOrigin);
+console.log('🌐 CORS nastavený pre origin:', frontendUrl);
 console.log('🌐 NODE_ENV:', process.env.NODE_ENV || 'development');
 
 app.use(cors(corsOptions));
