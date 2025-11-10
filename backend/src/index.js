@@ -7,9 +7,26 @@ require('dotenv').config();
 
 const app = express();
 
-// Security middleware
+// CORS konfigurácia - MUSÍ BYŤ PRED HELMET!
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || process.env.CORS_ORIGIN || 'http://localhost:3000',
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
+// Debug logging pre CORS
+const allowedOrigin = process.env.FRONTEND_URL || process.env.CORS_ORIGIN || 'http://localhost:3000';
+console.log('🌐 CORS nastavený pre origin:', allowedOrigin);
+console.log('🌐 NODE_ENV:', process.env.NODE_ENV || 'development');
+
+app.use(cors(corsOptions));
+
+// Security middleware - PO CORS!
 if (process.env.NODE_ENV === 'production') {
-  app.use(helmet());
+  app.use(helmet({
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+    crossOriginEmbedderPolicy: false
+  }));
 }
 
 // Rate limiting
@@ -19,14 +36,6 @@ const limiter = rateLimit({
   message: 'Príliš veľa požiadaviek z tejto IP adresy, skúste to znova neskôr.'
 });
 app.use('/api/', limiter);
-
-// CORS konfigurácia
-const corsOptions = {
-  origin: process.env.FRONTEND_URL || process.env.CORS_ORIGIN || 'http://localhost:3000',
-  credentials: true,
-  optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
 
 // Middleware
 app.use(express.json({ limit: '10mb' }));

@@ -150,7 +150,9 @@ Frontend beží na `http://localhost:3000`
 
 ## Dokumentácia
 
-- **DEPLOYMENT-SLOVAKIA.md** 🇸🇰 ⭐ - Nasadenie na slovenských hostingoch (WebSupport, Platon)
+- **PREPOJENIE-SLUZIEB.md** 🔗 ⭐ - Ako prepojiť všetky služby (Render, Vercel, MongoDB, Stripe)
+- **PRODUKCIA-READY.md** 🎉 - Finálny checklist a testovanie produkcie
+- **DEPLOYMENT-SLOVAKIA.md** 🇸🇰 - Nasadenie na slovenských hostingoch (WebSupport, Platon)
 - **DEPLOYMENT-EUROPE.md** 🇪🇺 - Nasadenie pre Slovensko (evropské cloud servery)
 - **DEPLOYMENT-GUIDE.md** - Kompletný návod na produkčné nasadenie
 - **QUICK-DEPLOY.md** - Rýchly start (5 minút)
