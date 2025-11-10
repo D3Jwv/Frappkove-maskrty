@@ -105,7 +105,12 @@ export const adminUsersAPI = {
 
 // Users API
 export const usersAPI = {
-  register: (data) => api.post('/users/register', data),
+  register: (data) => {
+    console.log('🔵 usersAPI.register called with data:', { ...data, password: '***' });
+    console.log('🔵 API URL:', API_URL);
+    console.log('🔵 Full URL will be:', `${API_URL}/users/register`);
+    return api.post('/users/register', data);
+  },
   login: (data) => api.post('/users/login', data),
   getProfile: () => api.get('/users/profile'),
   updateProfile: (data) => api.put('/users/profile', data),

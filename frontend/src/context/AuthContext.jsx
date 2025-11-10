@@ -44,10 +44,18 @@ export const AuthProvider = ({ children }) => {
   };
 
   const register = async (name, email, password) => {
-    const response = await usersAPI.register({ name, email, password });
-    localStorage.setItem('token', response.data.token);
-    setUser(response.data.user);
-    return response.data;
+    console.log('🔵 AuthContext.register called:', { name, email, password: '***' });
+    try {
+      console.log('🔵 Calling usersAPI.register...');
+      const response = await usersAPI.register({ name, email, password });
+      console.log('✅ usersAPI.register response:', response);
+      localStorage.setItem('token', response.data.token);
+      setUser(response.data.user);
+      return response.data;
+    } catch (error) {
+      console.error('❌ AuthContext.register error:', error);
+      throw error;
+    }
   };
 
   const logout = () => {
