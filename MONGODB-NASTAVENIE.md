@@ -44,7 +44,7 @@ PORT=5000
 NODE_ENV=development
 MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 JWT_SECRET=moj-tajny-kluc-zmenit-v-produkcii
-STRIPE_SECRET_KEY=sk_test_...
+STRIPE_SECRET_KEY=YOUR_STRIPE_SECRET_KEY_HERE
 FRONTEND_URL=http://localhost:3000
 CORS_ORIGIN=http://localhost:3000
 ```
@@ -116,7 +116,7 @@ MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrite
 JWT_SECRET=moj-tajny-kluc-zmenit-v-produkcii
 
 # Stripe
-STRIPE_SECRET_KEY=sk_test_51SRfJJK82VdqeY4xo8gD7F66qhG1dFvGXqyl7nukqCn3mp7UpoHitbrEPs4IUDdWn8g0Lwg1IEvWytsiz535hySA00rB9dlLJd
+STRIPE_SECRET_KEY=YOUR_STRIPE_SECRET_KEY_HERE
 STRIPE_WEBHOOK_SECRET=whsec_YOUR_WEBHOOK_SECRET_HERE
 
 # Frontend

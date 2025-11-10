@@ -211,8 +211,8 @@ Connection String: mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?ret
 
 ### Stripe Live
 ```
-Secret Key: sk_live_YOUR_SECRET_KEY_HERE
-Publishable Key: pk_live_YOUR_PUBLISHABLE_KEY_HERE
+Secret Key: YOUR_STRIPE_SECRET_KEY_HERE
+Publishable Key: YOUR_STRIPE_PUBLISHABLE_KEY_HERE
 Webhook Secret: whsec_YOUR_WEBHOOK_SECRET_HERE
 ```
 

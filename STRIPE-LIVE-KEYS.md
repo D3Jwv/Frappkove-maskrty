@@ -4,12 +4,12 @@
 
 ### Secret Key (Backend):
 ```
-sk_live_YOUR_SECRET_KEY_HERE
+YOUR_STRIPE_SECRET_KEY_HERE
 ```
 
 ### Publishable Key (Frontend):
 ```
-pk_live_YOUR_PUBLISHABLE_KEY_HERE
+YOUR_STRIPE_PUBLISHABLE_KEY_HERE
 ```
 
 ---
@@ -30,12 +30,12 @@ pk_live_YOUR_PUBLISHABLE_KEY_HERE
 
 #### Backend (`eshop/backend/.env`):
 ```env
-STRIPE_SECRET_KEY=sk_live_YOUR_SECRET_KEY_HERE
+STRIPE_SECRET_KEY=YOUR_STRIPE_SECRET_KEY_HERE
 ```
 
 #### Frontend (`eshop/frontend/.env`):
 ```env
-VITE_STRIPE_PUBLISHABLE_KEY=pk_live_YOUR_PUBLISHABLE_KEY_HERE
+VITE_STRIPE_PUBLISHABLE_KEY=YOUR_STRIPE_PUBLISHABLE_KEY_HERE
 ```
 
 **Po pridaní reštartujte servery!**
@@ -49,7 +49,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_YOUR_PUBLISHABLE_KEY_HERE
 3. Choďte do **"Environment"** sekcie
 4. Pridajte alebo upravte:
    - **Key:** `STRIPE_SECRET_KEY`
-   - **Value:** `sk_live_YOUR_SECRET_KEY_HERE`
+   - **Value:** `YOUR_STRIPE_SECRET_KEY_HERE`
 5. Kliknite **"Save Changes"**
 6. Render automaticky reštartuje službu
 
@@ -63,7 +63,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_YOUR_PUBLISHABLE_KEY_HERE
 4. Choďte do **"Variables"** tab
 5. Pridajte alebo upravte:
    - **Key:** `STRIPE_SECRET_KEY`
-   - **Value:** `sk_live_YOUR_SECRET_KEY_HERE`
+   - **Value:** `YOUR_STRIPE_SECRET_KEY_HERE`
 6. Railway automaticky reštartuje
 
 ---
@@ -75,7 +75,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_YOUR_PUBLISHABLE_KEY_HERE
 3. Choďte do **"Settings" → "Environment Variables"**
 4. Pridajte alebo upravte:
    - **Key:** `VITE_STRIPE_PUBLISHABLE_KEY`
-   - **Value:** `pk_live_YOUR_PUBLISHABLE_KEY_HERE`
+   - **Value:** `YOUR_STRIPE_PUBLISHABLE_KEY_HERE`
    - **Environment:** Production (a Development ak chcete)
 5. Kliknite **"Save"**
 6. Vercel automaticky redeployne
@@ -89,7 +89,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_YOUR_PUBLISHABLE_KEY_HERE
 3. Choďte do **"Site settings" → "Environment variables"**
 4. Pridajte alebo upravte:
    - **Key:** `VITE_STRIPE_PUBLISHABLE_KEY`
-   - **Value:** `pk_live_YOUR_PUBLISHABLE_KEY_HERE`
+   - **Value:** `YOUR_STRIPE_PUBLISHABLE_KEY_HERE`
 5. Kliknite **"Save"**
 6. Netlify automaticky redeployne
 

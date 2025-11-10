@@ -175,7 +175,7 @@ MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrite
 JWT_SECRET=vas-very-strong-secret-key-change-this
 
 # Stripe
-STRIPE_SECRET_KEY=sk_live_YOUR_SECRET_KEY_HERE
+STRIPE_SECRET_KEY=YOUR_STRIPE_SECRET_KEY_HERE
 STRIPE_WEBHOOK_SECRET=whsec_YOUR_WEBHOOK_SECRET_HERE
 
 # Frontend (pre CORS a redirecty)
@@ -190,7 +190,7 @@ CORS_ORIGIN=https://vas-frontend.vercel.app
 VITE_API_URL=https://vas-backend.onrender.com/api
 
 # Stripe
-VITE_STRIPE_PUBLISHABLE_KEY=pk_live_YOUR_PUBLISHABLE_KEY_HERE
+VITE_STRIPE_PUBLISHABLE_KEY=YOUR_STRIPE_PUBLISHABLE_KEY_HERE
 ```
 
 ---
