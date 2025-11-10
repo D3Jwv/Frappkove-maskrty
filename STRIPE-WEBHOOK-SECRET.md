@@ -3,7 +3,7 @@
 ## ✅ Váš Webhook Secret
 
 ```
-whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
+whsec_YOUR_WEBHOOK_SECRET_HERE
 ```
 
 ---
@@ -14,7 +14,7 @@ whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
 
 **Otvorte `eshop/backend/.env` a pridajte:**
 ```env
-STRIPE_WEBHOOK_SECRET=whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
+STRIPE_WEBHOOK_SECRET=whsec_YOUR_WEBHOOK_SECRET_HERE
 ```
 
 **Kompletný `.env` súbor by mal obsahovať:**
@@ -23,14 +23,14 @@ PORT=5000
 NODE_ENV=development
 
 # MongoDB
-MONGODB_URI=mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 
 # JWT
 JWT_SECRET=moj-tajny-kluc-zmenit-v-produkcii
 
 # Stripe
-STRIPE_SECRET_KEY=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
-STRIPE_WEBHOOK_SECRET=whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
+STRIPE_SECRET_KEY=sk_live_YOUR_SECRET_KEY_HERE
+STRIPE_WEBHOOK_SECRET=whsec_YOUR_WEBHOOK_SECRET_HERE
 
 # Frontend
 FRONTEND_URL=http://localhost:3000
@@ -48,7 +48,7 @@ CORS_ORIGIN=http://localhost:3000
 3. Choďte do **"Environment"** sekcie
 4. Pridajte alebo upravte:
    - **Key:** `STRIPE_WEBHOOK_SECRET`
-   - **Value:** `whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV`
+   - **Value:** `whsec_YOUR_WEBHOOK_SECRET_HERE`
 5. Kliknite **"Save Changes"**
 6. Render automaticky reštartuje službu
 
@@ -62,7 +62,7 @@ CORS_ORIGIN=http://localhost:3000
 4. Choďte do **"Variables"** tab
 5. Pridajte alebo upravte:
    - **Key:** `STRIPE_WEBHOOK_SECRET`
-   - **Value:** `whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV`
+   - **Value:** `whsec_YOUR_WEBHOOK_SECRET_HERE`
 6. Railway automaticky reštartuje
 
 ---
@@ -70,7 +70,7 @@ CORS_ORIGIN=http://localhost:3000
 ### 4. Heroku (Backend)
 
 ```bash
-heroku config:set STRIPE_WEBHOOK_SECRET=whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
+heroku config:set STRIPE_WEBHOOK_SECRET=whsec_YOUR_WEBHOOK_SECRET_HERE
 ```
 
 ---
@@ -108,14 +108,14 @@ heroku config:set STRIPE_WEBHOOK_SECRET=whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
 
 ```env
 # Stripe Live Keys
-STRIPE_SECRET_KEY=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
-STRIPE_WEBHOOK_SECRET=whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
+STRIPE_SECRET_KEY=sk_live_YOUR_SECRET_KEY_HERE
+STRIPE_WEBHOOK_SECRET=whsec_YOUR_WEBHOOK_SECRET_HERE
 ```
 
 ### Pre frontend (Vercel/Netlify):
 
 ```env
-VITE_STRIPE_PUBLISHABLE_KEY=pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWzTiKKb4A7WWYsBX0TxHjDWaJejllKWqdU651pe8o9oEFUW00dKlEyrQg
+VITE_STRIPE_PUBLISHABLE_KEY=pk_live_YOUR_PUBLISHABLE_KEY_HERE
 ```
 
 ---

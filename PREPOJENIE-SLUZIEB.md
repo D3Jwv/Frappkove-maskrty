@@ -97,7 +97,7 @@ CORS_ORIGIN=https://eshop-frontend.vercel.app
 
 **Váš Connection String:**
 ```
-mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority
+mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 ```
 
 ### Krok 2: Nastavte v Render
@@ -106,7 +106,7 @@ mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryW
 3. Choďte do **"Environment"** sekcie
 4. Pridajte alebo upravte:
    - **Key:** `MONGODB_URI`
-   - **Value:** `mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority`
+   - **Value:** `mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority`
 5. Kliknite **"Save Changes"**
 
 ### Krok 3: Skontrolujte Network Access
@@ -154,7 +154,7 @@ https://eshop-backend.onrender.com/api/payments/webhook
 3. Choďte do **"Environment"** sekcie
 4. Pridajte:
    - **Key:** `STRIPE_WEBHOOK_SECRET`
-   - **Value:** `whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV`
+   - **Value:** `whsec_YOUR_WEBHOOK_SECRET_HERE`
 5. Kliknite **"Save Changes"**
 
 ---
@@ -169,14 +169,14 @@ PORT=5000
 NODE_ENV=production
 
 # MongoDB
-MONGODB_URI=mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 
 # JWT
 JWT_SECRET=vas-very-strong-secret-key-change-this
 
 # Stripe
-STRIPE_SECRET_KEY=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
-STRIPE_WEBHOOK_SECRET=whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
+STRIPE_SECRET_KEY=sk_live_YOUR_SECRET_KEY_HERE
+STRIPE_WEBHOOK_SECRET=whsec_YOUR_WEBHOOK_SECRET_HERE
 
 # Frontend (pre CORS a redirecty)
 FRONTEND_URL=https://vas-frontend.vercel.app
@@ -190,7 +190,7 @@ CORS_ORIGIN=https://vas-frontend.vercel.app
 VITE_API_URL=https://vas-backend.onrender.com/api
 
 # Stripe
-VITE_STRIPE_PUBLISHABLE_KEY=pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWzTiKKb4A7WWYsBX0TxHjDWaJejllKWqdU651pe8o9oEFUW00dKlEyrQg
+VITE_STRIPE_PUBLISHABLE_KEY=pk_live_YOUR_PUBLISHABLE_KEY_HERE
 ```
 
 ---

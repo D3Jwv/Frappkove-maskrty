@@ -144,7 +144,7 @@ CORS_ORIGIN=https://vas-frontend.vercel.app
 
 #### 3. Backend (Render) → MongoDB Atlas
 ```env
-MONGODB_URI=mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 ```
 
 #### 4. Stripe → Backend (Render) Webhook
@@ -206,14 +206,14 @@ Webhook URL: https://vas-backend.onrender.com/api/payments/webhook
 
 ### MongoDB Atlas
 ```
-Connection String: mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority
+Connection String: mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 ```
 
 ### Stripe Live
 ```
-Secret Key: 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
-Publishable Key: pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWzTiKKb4A7WWYsBX0TxHjDWaJejllKWqdU651pe8o9oEFUW00dKlEyrQg
-Webhook Secret: whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
+Secret Key: sk_live_YOUR_SECRET_KEY_HERE
+Publishable Key: pk_live_YOUR_PUBLISHABLE_KEY_HERE
+Webhook Secret: whsec_YOUR_WEBHOOK_SECRET_HERE
 ```
 
 ---

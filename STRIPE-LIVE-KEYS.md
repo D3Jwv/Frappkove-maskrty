@@ -4,12 +4,12 @@
 
 ### Secret Key (Backend):
 ```
-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
+sk_live_YOUR_SECRET_KEY_HERE
 ```
 
 ### Publishable Key (Frontend):
 ```
-pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWzTiKKb4A7WWYsBX0TxHjDWaJejllKWqdU651pe8o9oEFUW00dKlEyrQg
+pk_live_YOUR_PUBLISHABLE_KEY_HERE
 ```
 
 ---
@@ -30,12 +30,12 @@ pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWzTiKKb4A7WWYsBX0TxHjDWaJejllK
 
 #### Backend (`eshop/backend/.env`):
 ```env
-STRIPE_SECRET_KEY=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
+STRIPE_SECRET_KEY=sk_live_YOUR_SECRET_KEY_HERE
 ```
 
 #### Frontend (`eshop/frontend/.env`):
 ```env
-VITE_STRIPE_PUBLISHABLE_KEY=pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWzTiKKb4A7WWYsBX0TxHjDWaJejllKWqdU651pe8o9oEFUW00dKlEyrQg
+VITE_STRIPE_PUBLISHABLE_KEY=pk_live_YOUR_PUBLISHABLE_KEY_HERE
 ```
 
 **Po pridaní reštartujte servery!**
@@ -49,7 +49,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWz
 3. Choďte do **"Environment"** sekcie
 4. Pridajte alebo upravte:
    - **Key:** `STRIPE_SECRET_KEY`
-   - **Value:** `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`
+   - **Value:** `sk_live_YOUR_SECRET_KEY_HERE`
 5. Kliknite **"Save Changes"**
 6. Render automaticky reštartuje službu
 
@@ -63,7 +63,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWz
 4. Choďte do **"Variables"** tab
 5. Pridajte alebo upravte:
    - **Key:** `STRIPE_SECRET_KEY`
-   - **Value:** `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`
+   - **Value:** `sk_live_YOUR_SECRET_KEY_HERE`
 6. Railway automaticky reštartuje
 
 ---
@@ -75,7 +75,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWz
 3. Choďte do **"Settings" → "Environment Variables"**
 4. Pridajte alebo upravte:
    - **Key:** `VITE_STRIPE_PUBLISHABLE_KEY`
-   - **Value:** `pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWzTiKKb4A7WWYsBX0TxHjDWaJejllKWqdU651pe8o9oEFUW00dKlEyrQg`
+   - **Value:** `pk_live_YOUR_PUBLISHABLE_KEY_HERE`
    - **Environment:** Production (a Development ak chcete)
 5. Kliknite **"Save"**
 6. Vercel automaticky redeployne
@@ -89,7 +89,7 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWz
 3. Choďte do **"Site settings" → "Environment variables"**
 4. Pridajte alebo upravte:
    - **Key:** `VITE_STRIPE_PUBLISHABLE_KEY`
-   - **Value:** `pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWzTiKKb4A7WWYsBX0TxHjDWaJejllKWqdU651pe8o9oEFUW00dKlEyrQg`
+   - **Value:** `pk_live_YOUR_PUBLISHABLE_KEY_HERE`
 5. Kliknite **"Save"**
 6. Netlify automaticky redeployne
 
@@ -99,27 +99,27 @@ VITE_STRIPE_PUBLISHABLE_KEY=pk_live_51SRfJ9GuvYdUKan8tagPRi5X4ypyxXxlBqgLgHUoRWz
 
 ### Váš Webhook Secret:
 ```
-whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
+whsec_YOUR_WEBHOOK_SECRET_HERE
 ```
 
 ### Kde ho nastaviť:
 
 #### Backend `.env` (lokálne testovanie):
 ```env
-STRIPE_WEBHOOK_SECRET=whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV
+STRIPE_WEBHOOK_SECRET=whsec_YOUR_WEBHOOK_SECRET_HERE
 ```
 
 #### Render (Backend):
 1. Choďte do **"Environment"** sekcie
 2. Pridajte:
    - **Key:** `STRIPE_WEBHOOK_SECRET`
-   - **Value:** `whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV`
+   - **Value:** `whsec_YOUR_WEBHOOK_SECRET_HERE`
 
 #### Railway (Backend):
 1. Choďte do **"Variables"** tab
 2. Pridajte:
    - **Key:** `STRIPE_WEBHOOK_SECRET`
-   - **Value:** `whsec_wOLdCq41WFWARoot7GcuxYrwDQiA5OuV`
+   - **Value:** `whsec_YOUR_WEBHOOK_SECRET_HERE`
 
 **⚠️ Dôležité:** Po pridaní reštartujte backend službu!
 

@@ -4,7 +4,7 @@
 
 Máte connection string:
 ```
-mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/?appName=Frappkovemaskrty
+mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/?appName=Frappkovemaskrty
 ```
 
 ## ⚠️ Čo treba upraviť:
@@ -17,7 +17,7 @@ mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/?appName=Fra
 ## ✅ Správny Connection String:
 
 ```
-mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority
+mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 ```
 
 **Zmeny:**
@@ -35,14 +35,14 @@ Otvorte súbor: `eshop/backend/.env`
 Nájdite riadok s `MONGODB_URI` a zmeňte ho na:
 
 ```env
-MONGODB_URI=mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 ```
 
 **Alebo ak neexistuje, pridajte ho:**
 ```env
 PORT=5000
 NODE_ENV=development
-MONGODB_URI=mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 JWT_SECRET=moj-tajny-kluc-zmenit-v-produkcii
 STRIPE_SECRET_KEY=sk_test_...
 FRONTEND_URL=http://localhost:3000
@@ -92,13 +92,13 @@ Keď budete nasadzovať na Render/Railway, pridajte tento connection string do E
 1. Choďte do Settings → Environment
 2. Pridajte:
    - Key: `MONGODB_URI`
-   - Value: `mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority`
+   - Value: `mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority`
 
 **V Railway:**
 1. Choďte do Variables tab
 2. Pridajte:
    - Key: `MONGODB_URI`
-   - Value: `mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority`
+   - Value: `mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority`
 
 ---
 
@@ -110,7 +110,7 @@ PORT=5000
 NODE_ENV=development
 
 # MongoDB
-MONGODB_URI=mongodb+srv://David:Animalia55@frappkovemaskrty.dedagxv.mongodb.net/eshop?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://USERNAME:PASSWORD@cluster.mongodb.net/eshop?retryWrites=true&w=majority
 
 # JWT
 JWT_SECRET=moj-tajny-kluc-zmenit-v-produkcii
