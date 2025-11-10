@@ -2,12 +2,31 @@ import axios from 'axios';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
+// Debug logging
+console.log('🌐 API URL:', API_URL);
+console.log('🌐 VITE_API_URL env:', import.meta.env.VITE_API_URL);
+
 const api = axios.create({
   baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json',
   },
 });
+
+// Error interceptor pre lepšie error handling
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    console.error('API Error:', {
+      url: error.config?.url,
+      method: error.config?.method,
+      status: error.response?.status,
+      data: error.response?.data,
+      message: error.message
+    });
+    return Promise.reject(error);
+  }
+);
 
 // Interceptor pre pridanie tokenu
 api.interceptors.request.use((config) => {

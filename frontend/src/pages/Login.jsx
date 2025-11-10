@@ -7,18 +7,29 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setLoading(true);
 
     try {
       await login(email, password);
       navigate('/');
     } catch (err) {
-      setError(err.response?.data?.message || 'Chyba pri prihlásení');
+      console.error('Login error:', err);
+      const errorMessage = err.response?.data?.message || err.message || 'Chyba pri prihlásení';
+      setError(errorMessage);
+      console.error('Error details:', {
+        response: err.response,
+        message: err.message,
+        stack: err.stack
+      });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -46,8 +57,8 @@ const Login = () => {
               required
             />
           </div>
-          <button type="submit" className="btn-submit">
-            Prihlásiť sa
+          <button type="submit" className="btn-submit" disabled={loading}>
+            {loading ? 'Prihlasujem...' : 'Prihlásiť sa'}
           </button>
         </form>
         <p className="auth-link">

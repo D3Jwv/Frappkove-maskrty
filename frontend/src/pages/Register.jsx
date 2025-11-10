@@ -8,15 +8,18 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const { register } = useAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    setLoading(true);
 
     if (password.length < 6) {
       setError('Heslo musí mať aspoň 6 znakov');
+      setLoading(false);
       return;
     }
 
@@ -24,7 +27,16 @@ const Register = () => {
       await register(name, email, password);
       navigate('/');
     } catch (err) {
-      setError(err.response?.data?.message || 'Chyba pri registrácii');
+      console.error('Register error:', err);
+      const errorMessage = err.response?.data?.message || err.message || 'Chyba pri registrácii';
+      setError(errorMessage);
+      console.error('Error details:', {
+        response: err.response,
+        message: err.message,
+        stack: err.stack
+      });
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -62,8 +74,8 @@ const Register = () => {
               minLength={6}
             />
           </div>
-          <button type="submit" className="btn-submit">
-            Registrovať sa
+          <button type="submit" className="btn-submit" disabled={loading}>
+            {loading ? 'Registrujem...' : 'Registrovať sa'}
           </button>
         </form>
         <p className="auth-link">
