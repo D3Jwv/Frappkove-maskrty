@@ -18,7 +18,16 @@ if (!isValidKey) {
 }
 
 // Inicializovať Stripe len ak má platný kľúč
-const stripe = isValidKey ? require('stripe')(stripeKey.trim()) : null;
+let stripe = null;
+if (isValidKey) {
+  try {
+    stripe = require('stripe')(stripeKey.trim());
+    console.log('✅ Stripe inicializovaný úspešne');
+  } catch (error) {
+    console.error('❌ Chyba pri inicializácii Stripe:', error.message);
+    stripe = null;
+  }
+}
 
 // Vytvoriť payment intent
 exports.createPaymentIntent = async (amount, currency = 'eur', metadata = {}) => {
